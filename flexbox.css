@@ -1,0 +1,73 @@
+.overview-icon {
+  width: 25px;
+  height: auto;
+}
+.code {
+  font-size: 24px;
+  color: green;
+}
+h3 + p:first-line {
+  color: inherit;
+}
+li:first-child {
+  font-weight: normal;
+}
+li:nth-child(even) {
+  color: inherit;
+}
+li {
+  font-size: 22px;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+.flexbox-list {
+  margin-top: 10px;
+}
+.flexbox-list li:last-child {
+  font-style: inherit;
+}
+h4 {
+  margin-bottom: 40px;
+}
+
+/* FLEXBOX LAYOUT */
+.container-row {
+  width: 1200px;
+}
+.main-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main-row {
+  display: flex;
+  gap: 75px;
+}
+.post-header-row {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 20px;
+}
+article {
+  flex: 1;
+  margin-bottom: 0;
+  position: relative;
+}
+aside {
+  flex: 0 0 350px;
+  align-self: center;
+}
+
+.btn_flex {
+  bottom: 200px;
+  right: -200px;
+}
+
+.flexbox-list li {
+  margin-bottom: 30px;
+}
+h2::after {
+  right: -300px;
+  top: 20px;
+}

@@ -2,11 +2,243 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flexbox</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="flexbox.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prettier/2.5.1/prettier.min.js"></script>
   </head>
   <body>
-    <h2>Flexbox</h2>
-    <a href="index.html">Go to Home</a>
+    <div class="container container-row">
+      <header class="main-header main-header-row">
+        <h1>
+          <img
+            src="img/overview.svg"
+            alt="overview icon"
+            class="overview-icon"
+          />
+          A Simple Flexbox Layout
+        </h1>
+        <nav>
+          <a href="index.html"> Home </a>
+          <a href="blog.html"> Blog </a>
+          <a href="challenges.html"> Challenges </a>
+          <a href="grid.html"> CSS Grid </a>
+        </nav>
+      </header>
+      <div class="main-row">
+        <article>
+          <header class="post-header">
+            <h2>
+              A set of related CSS properties that we can use to build
+              one-dimensional layouts.
+            </h2>
+            <div class="post-header-row">
+              <img
+                src="img/arsial.jpg"
+                alt="author image"
+                width="100"
+                height="100"
+              />
+              <p id="author">
+                Posted by <strong>Arsial</strong> on Monday, March 21st 2024
+              </p>
+            </div>
+            <img
+              src="img/post-img-2.png"
+              alt="HTML code on screen"
+              width="500"
+              height="200"
+              class="post-img"
+            />
+            <button class="btn_flex">❤ Like</button>
+          </header>
+          <p>
+            When flexbox was developed a couple of years ago, the main idea
+            behind it was to basically allow browsers to automatically divide
+            empty space inside some container element by its child elements. And
+            by doing that, the browser takes away a lot of work that previously
+            the web developers had to do.
+          </p>
+          <p>
+            In this post, let's focus on Flexbox. We will learn what Flexbox is
+            all about, and why you too should learn and use it.
+          </p>
+          <h3>What is Flexbox?</h3>
+          <p>
+            Flexbox, short for Flexible Box Layout, is a one-dimensional layout
+            model in CSS that offers a more efficient way to lay out, align, and
+            distribute space among items in a container, even when their size is
+            unknown or dynamic.
+          </p>
+          <p>
+            It's a powerful tool designed to accommodate complex layouts and
+            alignments that were difficult to achieve with traditional CSS
+            properties alone. Flexbox makes it easier to design flexible
+            responsive layout structures without having to use floats or
+            positioning.
+          </p>
+
+          <p>
+            You can explore the Flexbox guide at
+            <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/"
+              >CSS-Tricks</a
+            >
+            to learn more.
+          </p>
+          <h3>How to use Flexbox?</h3>
+          <p>
+            There are not many concepts behind flexbox that you need to
+            understand in order to start using it. But here is what you do need
+            to know.
+          </p>
+          <p>
+            So, first of all, the element on which we want to use flexbox is
+            called the flex container. All we have to do in order to create a
+            flex container is to set display property of container to flex. And
+            that's it.
+          </p>
+          <pre>
+          <code class="language-css code">
+            
+            .container {
+              display: flex;
+            }
+          </code>
+        </pre>
+
+          <p>
+            if we do this, then all the direct children of that flex container
+            will become the so-called flex items.
+          </p>
+          <p>
+            By default flex items are aligned to main axis (horizontal) but we
+            can change the direction of flexbox axis from horizontal to
+            vertical, so we can align elements/flex items along the main axis
+            and along the cross axis in different ways.
+          </p>
+          <p>We always need to know which axis we are dealing with.</p>
+          <h3>Overview of all Flexbox properties</h3>
+          <p>
+            Overview of all the CSS properties that are part of the flexbox
+            specification both for the flex container and for the flex items.
+          </p>
+          <p>
+            So for the flex container, the most important ones are the
+            <strong>gap</strong>, the <strong>justify-content</strong> and the
+            <strong>align-items</strong> properties.
+          </p>
+          <pre>
+          <code class="language-css code">
+            
+            .container {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              gap: 20px;
+            }
+            
+          </code>
+        </pre>
+          <p>
+            There are three other properties that we can apply on the flex
+            container element, which are <strong>flex-direction</strong>,
+            <strong>flex-wrap</strong>, and <strong>align-content</strong>.
+          </p>
+          <p>
+            In properties for flex-items, <strong>align-auto</strong> is pretty
+            important because it can override the
+            <strong>align-items</strong>property
+          </p>
+          <p>
+            Then we have these other ones which are <strong>flex-grow</strong>,
+            <strong>flex-shrink</strong>, <strong>flex-basis</strong>.
+            <strong>flex</strong> is the recommended shorthand for
+            <strong>flex-grow</strong>, <strong>flex-shrink</strong> and
+            <strong>flex-basis</strong>.
+          </p>
+          <p>
+            Flexbox allows flex items to flex (grow or shrink) to fill available
+            space in the container. This is particularly useful for creating
+            responsive designs that adjust and adapt to different screen sizes.
+          </p>
+          <h3>Why should you learn Flexbox?</h3>
+          <p>
+            There are countless and compelling reasons for learning and using
+            Flexbox:
+          </p>
+          <ul>
+            <li>
+              <strong> Responsive Design:</strong> Flexbox makes it much easier
+              to create responsive designs that adapt to different screen sizes
+              and devices. This is essential in today's world where users access
+              websites on a variety of devices, from smartphones to desktop
+              computers.
+            </li>
+            <li>
+              <strong> Simplified Layouts:</strong> Flexbox simplifies complex
+              layout tasks that were traditionally challenging with CSS alone.
+              With Flexbox, you can easily create complex layouts with less
+              code, making your development process more efficient and your code
+              easier to maintain.
+            </li>
+            <li>
+              <strong> Flexibility and Control:</strong> Flexbox gives you
+              fine-grained control over the alignment, ordering, and sizing of
+              elements within a container. This level of control allows you to
+              create visually appealing designs that were previously difficult
+              to achieve.
+            </li>
+            <li>
+              <strong> Future-Proofing:</strong> While newer layout methods like
+              CSS Grid are gaining popularity, Flexbox is still widely used and
+              will continue to be relevant for the foreseeable future. By
+              mastering Flexbox, you'll have a solid foundation in modern web
+              layout techniques that will serve you well in your career.
+            </li>
+            <li>To have fun 😃</li>
+          </ul>
+          <p>Hopefully you learned something new here. See you next time!</p>
+        </article>
+        <aside>
+          <h4>Flexbox Summary</h4>
+          <ul class="flexbox-list">
+            <li>
+              Flexbox makes it easy to automatically
+              <strong>align items to one another</strong> inside a parent
+              container, both horizontally and vertically
+            </li>
+            <li>
+              Flexbox solves common layout problems such as
+              <strong>vertical centering</strong> and creating
+              <strong>equal-height columns</strong>
+            </li>
+            <li>
+              Flexbox is perfect for <strong>replacing floats</strong>, allowing
+              us to write fewer and cleaner HTML and CSS code
+            </li>
+          </ul>
+        </aside>
+      </div>
+      <footer>
+        <p id="copyright">Copyright &copy; 2027 by Arsial</p>
+      </footer>
+    </div>
+    <script>
+      // Function to format CSS code snippets
+      function formatCSS() {
+        var codeSnippets = document.querySelectorAll("code.language-css");
+        codeSnippets.forEach(function (snippet) {
+          var formattedCode = prettier.format(snippet.textContent, {
+            parser: "css",
+          });
+          snippet.textContent = formattedCode;
+        });
+      }
+
+      // Call the function after the page loads
+      window.onload = function () {
+        formatCSS();
+      };
+    </script>
   </body>
 </html>
