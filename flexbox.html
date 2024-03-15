@@ -5,7 +5,6 @@
     <title>Flexbox</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="flexbox.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prettier/2.5.1/prettier.min.js"></script>
   </head>
   <body>
     <div class="container container-row">
@@ -101,7 +100,7 @@
           <code class="language-css code">
             
             .container {
-              display: flex;
+                display: flex;
             }
           </code>
         </pre>
@@ -131,10 +130,10 @@
           <code class="language-css code">
             
             .container {
-              display: flex;
-              align-items: center;
-              justify-content: space-between;
-              gap: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 20px;
             }
             
           </code>
@@ -223,22 +222,5 @@
         <p id="copyright">Copyright &copy; 2027 by Arsial</p>
       </footer>
     </div>
-    <script>
-      // Function to format CSS code snippets
-      function formatCSS() {
-        var codeSnippets = document.querySelectorAll("code.language-css");
-        codeSnippets.forEach(function (snippet) {
-          var formattedCode = prettier.format(snippet.textContent, {
-            parser: "css",
-          });
-          snippet.textContent = formattedCode;
-        });
-      }
-
-      // Call the function after the page loads
-      window.onload = function () {
-        formatCSS();
-      };
-    </script>
   </body>
 </html>

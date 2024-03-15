@@ -1,12 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSS Grid</title>
-  </head>
-  <body>
-    <h2>CSS Grid</h2>
-    <a href="index.html">Go to Home</a>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>CSS Grid</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="grid.css" />
+</head>
+
+<body>
+  <div class="container container-row">
+    <header class="main-header main-header-row">
+      <h1>
+        <img src="img/overview.svg" alt="overview icon" class="overview-icon" />
+        A Simple CSS Grid Layout
+      </h1>
+      <nav>
+        <a href="index.html"> Home </a>
+        <a href="blog.html"> Blog </a>
+        <a href="challenges.html"> Challenges </a>
+        <a href="flexbox.html"> Flexbox </a>
+      </nav>
+    </header>
+      <article>
+        <header class="post-header">
+          <h2>
+            A set of related CSS properties that we can use to build
+            two-dimensional layouts.
+          </h2>
+          <div class="post-header-row">
+            <img src="img/arsial.jpg" alt="author image" width="100" height="100" />
+            <p id="author">
+              Posted by <strong>Arsial</strong> on Friday, March 25th 2024
+            </p>
+          </div>
+          <img src="img/post-img-3.png" alt="HTML code on screen" width="500" height="200" class="post-img" />
+          <button class="btn_flex">❤ Like</button>
+        </header>
+        <p>
+          CSS Grid is right now the most modern way of building layouts and
+          it's also the most complete one and in my opinion is even the
+          easiest way of building layouts at least if you use only the
+          fundamentals. When CSS Grid was first developed and brought into
+          browsers a couple of years ago, the main idea behind it was that now
+          we could divide a container element into rows and columns that we
+          could then fill with its child elements.
+        </p>
+
+        <p>
+          In this post, let's focus on CSS-Grid. We will learn what CSS-Grid
+          is all about, and why you too should learn and use it.
+        </p>
+        <h3>What is CSS Grid?</h3>
+        <p>
+          At the most basic level CSS Grid is a set of CSS properties that web
+          developers can use to build two dimensional layouts.
+        </p>
+        <p>
+          CSS Grid allows you to create a grid-based layout where you can
+          place website elements in precise locations and easily make
+          responsive designs. You can define columns and rows in your grid,
+          place items in specific grid areas, control the size of the gaps
+          between elements, and much more.
+        </p>
+
+        <p>
+          You can explore the CSS-Grid guide at
+          <a href="https://css-tricks.com/snippets/css/complete-guide-grid/">CSS-Tricks</a>
+          to learn more.
+        </p>
+        <h3>How to use CSS Grid</h3>
+        <p>
+          One common misconception that many beginners have is that CSS Grid
+          is meant to replace flexbox. However, that is really not the case.
+          So instead flexbox and CSS Grid work together perfectly. You simply
+          use them in different situations.
+        </p>
+        <p>
+          So when you need a one dimensional layout, then you can simply reach
+          for flexbox. But if you need a two dimensional layout, which is
+          usually a grid anyway, then you can use CSS Grid for that.
+        </p>
+        <p>
+          We create a grid container by setting its display property to grid.
+          Then all the child elements of the grid container will be the grid
+          items.
+        </p>
+
+        <pre>
+          <code class="language-css code">
+
+            .container {
+                display: grid;
+            }
+          </code>
+        </pre>
+        <p>
+          Now, unlike flexbox we cannot change the direction of the row and
+          the column axis, which actually makes it even a bit easier to work
+          with CSS Grid.
+        </p>
+
+        <p>
+          However, since two dimensional layouts are a bit more complex, we
+          need actually some more terminology in order to really understand
+          what's going on. So let's look at some more terminology here.
+        </p>
+
+        <h3>Overview of all CSS Grid properties</h3>
+        <p>
+          So for the CSS Grid container, the most fundamental ones are the
+          <strong>grid-template-columns</strong>, the
+          <strong>grid-template-rows</strong>, the
+          <strong>column-gap</strong> and the
+          <strong>row-gap</strong> properties.
+        </p>
+        <pre>
+          <code class="language-css code">
+
+            .container {
+                display: grid;
+                grid-template-columns: 200px 1fr 100px;
+                grid-template-rows: 300px 200px 2fr 50px;
+                column-gap: 20px;
+                row-gap: 10px;
+            }
+
+
+          </code>
+        </pre>
+
+        <p>
+          <strong>Grid Lines:</strong> divide up the grid and separate the columns and the rows. They can be vertical
+          (column lines) or horizontal (row lines).
+        </p>
+        <p>
+          These grid lines are numbered from one to the number of columns plus one, and the number of rows plus one. So
+          if we have three columns, then we have four grid lines for the columns. And if we have two rows, then we
+          have three grid lines for the rows.
+        </p>
+
+        <p>
+          These numbers are actually important because we can use them to place a grid item exactly in one place in the grid where we want it to be.
+        </p>
+        <p>
+          <strong>Grid Track:</strong> The space between two adjacent grid
+          lines. You can think of them as the columns or rows of the grid.
+        </p>
+
+        <p>
+          <strong>Grid Cell:</strong> The space between two adjacent row and
+          two adjacent column grid lines. It's the single unit of the grid. Grid cells are always created, but they don't always need to be filled.
+        </p>
+
+        <p>
+          <strong>Grid Area:</strong> Any rectangular area enclosed by four
+          grid lines. A grid area can be composed of one or more grid cells.
+        </p>
+
+        <p>
+          <strong>Fr Unit:</strong> A flexible length unit that distributes
+          available space. It allows for the creation of flexible layouts
+          that adapt to the size of the container.
+          </li>
+
+        <p>
+          There are also two less important properties on the grid container, which are <strong>justify content</strong> and <strong>align content</strong>. These only apply if the container is actually larger than the grid.
+
+        </p>
+        
+        <h3>Why should you learn CSS Grid?</h3>
+        <p>
+          There are countless and compelling reasons for learning and using
+          CSS Grid:
+        </p>
+        <ul>
+          <li>
+            <strong> Simplicity:</strong>CSS Grid simplifies the process of creating complex layouts. With just a few lines of CSS, you can define a grid and place items precisely where you want them. This simplicity leads to cleaner and more maintainable code compared to older layout methods like floats and positioning.
+          </li>
+          <li>
+            <strong> Powerful Layout Control:</strong> CSS Grid provides precise control over layout structure, allowing you to create sophisticated designs without relying on nested HTML structures or complex CSS rules. You can easily create multi-column and multi-row layouts, control the size and alignment of grid items, and create responsive designs with minimal effort.
+          </li>
+          <li>
+            <strong> Responsive Design:</strong> CSS Grid makes it easy to create responsive layouts that adapt to different screen sizes and devices. By defining flexible grid tracks and using features like media queries, you can create designs that look great on everything from large desktop screens to mobile devices.
+          </li>
+          <li><strong>Grid Gap:</strong> CSS Grid introduces the grid-gap property, which allows you to specify the spacing between grid items. This feature makes it easy to create visually appealing layouts with consistent spacing between elements.</li>
+          <li>
+            <strong> Future-Proofing:</strong> CSS Grid is a modern layout solution that is widely supported by modern web browsers. By using CSS Grid, you're adopting a forward-looking approach to web development that will continue to be supported and improved upon in the future.
+          </li>
+          <li>To have fun 😃</li>
+        </ul>
+        <p>Hopefully you learned something new here. See you next time!</p>
+      </article>
+      <aside>
+        <h4>CSS Grid Summary</h4>
+        <ul class="flexbox-list"> 
+          <li>
+            In two-dimensional contexts, CSS Grid allows us to write <strong>less nested HTML</strong> and <strong>easier-to-read CSS</strong>.
+          </li>
+          <li>
+            CSS grid tracks, grid gap and other properties allow you to create visually <strong>appealing layouts with consistent spacing</strong> between elements.
+          </li>
+          <li>
+            CSS grid is <strong>not meant to replace flexbox!</strong> Instead, they work perfectly together.
+          </li>
+          <li>Need a <strong>1D</strong> layout? Use flexbox. Need a <strong>2D</strong> layout? Use CSS Grid.</li>
+        </ul>
+      </aside>
+    <footer>
+      <p id="copyright">Copyright &copy; 2027 by Arsial</p>
+    </footer>
+  </div>
+
+</body>
+
 </html>

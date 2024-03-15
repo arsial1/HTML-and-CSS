@@ -1,14 +1,7 @@
-.overview-icon {
-  width: 25px;
-  height: auto;
-}
-.code {
-  font-size: 24px;
-  color: green;
-}
 h3 + p:first-line {
   color: inherit;
 }
+
 li:first-child {
   font-weight: normal;
 }
@@ -62,12 +55,4 @@ aside {
 .btn_flex {
   bottom: 200px;
   right: -200px;
-}
-
-.flexbox-list li {
-  margin-bottom: 30px;
-}
-h2::after {
-  right: -300px;
-  top: 20px;
 }

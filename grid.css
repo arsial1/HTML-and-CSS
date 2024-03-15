@@ -1,0 +1,61 @@
+h3 + p:first-line {
+  color: inherit;
+}
+
+li:first-child {
+  font-weight: normal;
+}
+li:nth-child(even) {
+  color: inherit;
+}
+li {
+  font-size: 22px;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+.flexbox-list li {
+  margin-bottom: 30px;
+}
+.flexbox-list li:last-child {
+  font-style: inherit;
+}
+h4 {
+  margin-bottom: 40px;
+}
+
+.btn_flex {
+  bottom: 200px;
+  right: -200px;
+}
+
+.container-row {
+  width: 1200px;
+}
+
+/* CSS Grid LAYOUT */
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  column-gap: 75px;
+  row-gap: 60px;
+}
+.main-header {
+  grid-column: 1/-1;
+  /* To experiment row-gap, remove margin-bottom */
+  margin-bottom: 0;
+}
+article {
+  /* To experiment row-gap, remove margin-bottom */
+  margin-bottom: 0;
+  position: relative;
+}
+aside {
+  width: auto;
+  grid-column: 2/-1;
+  align-self: center;
+  padding-right: 20px;
+}
+footer {
+  grid-column: 1/-1;
+}
